@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  const Category({super.key, required this.title});
-  final title;
+  const Category({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final params =
+        (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{})
+            as Map;
+    String title = (params['title']).toString();
     return Scaffold(
       appBar: AppBar(title: Text('Category $title')),
       body: ListView.separated(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/pages/home/category.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -17,9 +16,11 @@ class HomeBody extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return InkWell(
           onTap: () {
-            Navigator.of(
+            Navigator.pushNamed(
               context,
-            ).push(MaterialPageRoute(builder: ((_) => Category(title: index))));
+              '/category',
+              arguments: {"title": index},
+            );
           },
           child: Column(
             children: [
