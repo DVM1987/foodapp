@@ -19,7 +19,7 @@ class HomeBody extends StatelessWidget {
           onTap: () {
             Navigator.of(
               context,
-            ).push(MaterialPageRoute(builder: ((_) => Category())));
+            ).push(MaterialPageRoute(builder: ((_) => Category(title: index))));
           },
           child: Column(
             children: [

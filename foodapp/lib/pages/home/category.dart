@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  const Category({super.key});
-
+  const Category({super.key, required this.title});
+  final title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Category')),
+      appBar: AppBar(title: Text('Category $title')),
       body: ListView.separated(
         padding: EdgeInsets.all(10),
         itemCount: 10,
